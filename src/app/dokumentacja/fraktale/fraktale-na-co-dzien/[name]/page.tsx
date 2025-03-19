@@ -2,6 +2,10 @@ import TextColorOutline from '@/components/TextColorOutline'
 import { FractalsOnADailyBasis } from '@/data/fractals'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export async function generateStaticParams() {
+	return [{ name: 'przyroda' }, { name: 'medycyna' }, { name: 'grafika-komputerowa' }]
+}
 type Props = {
 	params: Promise<{ name: string }>
 }
