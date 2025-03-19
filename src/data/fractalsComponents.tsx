@@ -714,11 +714,9 @@ export function JuliaSet() {
 		return { width, height }
 	}, [windowWidth])
 
-	if (!canvasSize) {
-		return <div>Ładowanie Julii...</div>
-	}
-
 	useEffect(() => {
+		if (!canvasSize) return
+
 		const canvas = canvasRef.current
 		if (canvas) {
 			const ctx = canvas.getContext('2d')
@@ -732,6 +730,9 @@ export function JuliaSet() {
 		}
 	}, [maxIter, cx, cy, canvasSize])
 
+	if (!canvasSize) {
+		return <div>Ładowanie Julii...</div>
+	}
 	return (
 		<div className="flex flex-col items-center">
 			<div className="mb-8">
@@ -898,11 +899,8 @@ export function LorenzAttractor() {
 		return { width, height: width }
 	}, [windowWidth])
 
-	if (!windowWidth) {
-		return <div>Ładowanie atraktora Lorenza...</div>
-	}
-
 	useEffect(() => {
+		if (!canvasSize) return
 		const sigma = 10
 		const rho = 28
 		const beta = 8 / 3
@@ -993,6 +991,10 @@ export function LorenzAttractor() {
 			}
 		}
 	}, [canvasSize])
+
+	if (!canvasSize) {
+		return <div>Ładowanie atraktora Lorenza...</div>
+	}
 
 	return (
 		<div className="flex flex-col items-center">
