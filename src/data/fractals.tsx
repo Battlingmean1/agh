@@ -45,7 +45,7 @@ export const Fractals: FractalsType = {
 		title: 'Trójkąt Sierpińskiego',
 		path: 'trojkat-sierpinskiego',
 		authorName: 'Wacław Sierpiński',
-		authorImage: '/fractalAuthors/Waclaw_Sierpinski.jpg',
+		authorImage: './fractalAuthors/Waclaw_Sierpinski.jpg',
 		authorDescription:
 			'Wacław Sierpiński (1882 - 1969) był czołowym polskim matematykiem związanym z warszawską szkołą matematyczną. Pracował na Uniwersytecie Warszawskim, kierował Instytutem Matematycznym PAN i był członkiem wielu akademii nauk. Jego badania dotyczyły m.in. teorii liczb, analizy matematycznej oraz podstaw matematyki, zwłaszcza teorii mnogości i zagadnień nieskończoności. Opublikował setki prac, promował młodych naukowców i współtworzył ważne czasopisma matematyczne. Za swoje osiągnięcia został wielokrotnie odznaczony, m.in. Krzyżem Wielkim Orderu Odrodzenia Polski.',
 		authorURL: 'https://pl.wikipedia.org/wiki/Wac%C5%82aw_Sierpi%C5%84ski#',
