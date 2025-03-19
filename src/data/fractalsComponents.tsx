@@ -53,13 +53,13 @@ export function SierpinskiTriangle() {
 	}
 
 	const [value, setValue] = useState(1)
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	const [windowWidth, setWindowWidth] = useState<number | null>(null)
 
 	useEffect(() => {
+		setWindowWidth(window.innerWidth)
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth)
 		}
-
 		window.addEventListener('resize', handleResize)
 
 		return () => {
@@ -68,10 +68,15 @@ export function SierpinskiTriangle() {
 	}, [])
 
 	const canvasSize = useMemo(() => {
+		if (!windowWidth) return { width: 400, height: 200 }
 		const width = Math.min(windowWidth * 0.7, 800)
 		const height = width / 2
 		return { width, height }
 	}, [windowWidth])
+
+	if (!windowWidth) {
+		return <div>Ładowanie trójkąta...</div>
+	}
 
 	return (
 		<div>
@@ -217,26 +222,30 @@ export function KochCurve() {
 		return <canvas ref={canvasRef} width={width} height={height} className="bg-gray-900"></canvas>
 	}
 
-	const [value, setValue] = useState(0)
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	const [windowWidth, setWindowWidth] = useState<number | null>(null)
 
 	useEffect(() => {
+		setWindowWidth(window.innerWidth)
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth)
 		}
-
 		window.addEventListener('resize', handleResize)
-
 		return () => {
 			window.removeEventListener('resize', handleResize)
 		}
 	}, [])
+
+	if (!windowWidth) {
+		return <div>Ładowanie krzywej...</div>
+	}
 
 	const canvasSize = useMemo(() => {
 		const width = Math.min(windowWidth * 0.7, 800)
 		const height = width / 2
 		return { width, height }
 	}, [windowWidth])
+
+	const [value, setValue] = useState(0)
 
 	return (
 		<div>
@@ -319,26 +328,30 @@ export function KochSnowflake() {
 		return <canvas ref={canvasRef} width={width} height={height} className="bg-gray-900"></canvas>
 	}
 
-	const [value, setValue] = useState(0)
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	const [windowWidth, setWindowWidth] = useState<number | null>(null)
 
 	useEffect(() => {
+		setWindowWidth(window.innerWidth)
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth)
 		}
-
 		window.addEventListener('resize', handleResize)
-
 		return () => {
 			window.removeEventListener('resize', handleResize)
 		}
 	}, [])
+
+	if (!windowWidth) {
+		return <div>Ładowanie płatka...</div>
+	}
 
 	const canvasSize = useMemo(() => {
 		const width = Math.min(windowWidth * 0.7, 800)
 		const height = width
 		return { width, height }
 	}, [windowWidth])
+
+	const [value, setValue] = useState(0)
 
 	return (
 		<div>
@@ -388,7 +401,6 @@ export function BinaryTree() {
 			const ctx = contextRef.current
 			if (ctx) {
 				ctx.clearRect(0, 0, width, height)
-				ctx.strokeStyle = '#3f95eb'
 				drawTree(ctx, width / 2, height - 50, -Math.PI / 2, height / 4, depth)
 			}
 		}, [width, height, depth, drawTree])
@@ -396,26 +408,30 @@ export function BinaryTree() {
 		return <canvas ref={canvasRef} width={width} height={height} className="bg-gray-900"></canvas>
 	}
 
-	const [value, setValue] = useState(0)
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	const [windowWidth, setWindowWidth] = useState<number | null>(null)
 
 	useEffect(() => {
+		setWindowWidth(window.innerWidth)
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth)
 		}
-
 		window.addEventListener('resize', handleResize)
-
 		return () => {
 			window.removeEventListener('resize', handleResize)
 		}
 	}, [])
+
+	if (!windowWidth) {
+		return <div>Ładowanie drzewa...</div>
+	}
 
 	const canvasSize = useMemo(() => {
 		const width = Math.min(windowWidth * 0.8, 800)
 		const height = width
 		return { width, height }
 	}, [windowWidth])
+
+	const [value, setValue] = useState(0)
 
 	return (
 		<div className="flex flex-col items-center">
@@ -446,9 +462,9 @@ export function CantorSet() {
 					ctx.lineTo(x + length, y)
 					ctx.stroke()
 
-					const halfLength = length / 3
-					drawCantorSet(ctx, x, y + 20, halfLength, depth - 1)
-					drawCantorSet(ctx, x + halfLength * 2, y + 20, halfLength, depth - 1)
+					const third = length / 3
+					drawCantorSet(ctx, x, y + 20, third, depth - 1)
+					drawCantorSet(ctx, x + 2 * third, y + 20, third, depth - 1)
 				}
 			},
 			[]
@@ -472,20 +488,22 @@ export function CantorSet() {
 		return <canvas ref={canvasRef} width={width} height={height} className="bg-gray-900"></canvas>
 	}
 
-	const [value, setValue] = useState(0)
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	const [windowWidth, setWindowWidth] = useState<number | null>(null)
 
 	useEffect(() => {
+		setWindowWidth(window.innerWidth)
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth)
 		}
-
 		window.addEventListener('resize', handleResize)
-
 		return () => {
 			window.removeEventListener('resize', handleResize)
 		}
 	}, [])
+
+	if (!windowWidth) {
+		return <div>Ładowanie zbioru Cantora...</div>
+	}
 
 	const canvasSize = useMemo(() => {
 		const width = Math.min(windowWidth * 0.7, 800)
@@ -493,11 +511,13 @@ export function CantorSet() {
 		return { width, height }
 	}, [windowWidth])
 
+	const [value, setValue] = useState(0)
+
 	return (
 		<div>
 			<CantorSetCanvas width={canvasSize.width} height={canvasSize.height} depth={value} />
 			<div>
-				<div className="relative">Stopień zbioru Cantora: {value}</div>
+				<p>Stopień zbioru Cantora: {value}</p>
 				<input type="range" value={value} onChange={e => setValue(parseInt(e.target.value))} min={0} max={7} />
 			</div>
 		</div>
@@ -507,7 +527,7 @@ export function CantorSet() {
 export function MandelbrotSet() {
 	const canvasRef = useRef<HTMLCanvasElement | null>(null)
 	const [maxIter, setMaxIter] = useState(50)
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	const [windowWidth, setWindowWidth] = useState<number | null>(null)
 
 	const drawMandelbrot = (ctx: CanvasRenderingContext2D, width: number, height: number, maxIter: number) => {
 		const imageData = ctx.createImageData(width, height)
@@ -549,16 +569,19 @@ export function MandelbrotSet() {
 	}
 
 	useEffect(() => {
+		setWindowWidth(window.innerWidth)
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth)
 		}
-
 		window.addEventListener('resize', handleResize)
-
 		return () => {
 			window.removeEventListener('resize', handleResize)
 		}
 	}, [])
+
+	if (!windowWidth) {
+		return <div>Ładowanie Mandelbrota...</div>
+	}
 
 	const canvasSize = useMemo(() => {
 		const width = Math.min(windowWidth * 0.6, 800)
@@ -579,8 +602,8 @@ export function MandelbrotSet() {
 	return (
 		<div className="flex flex-col items-center">
 			<div className="mb-8">
-				<p className="text-xl text-center">
-					Na telefonach, mniejszych ekranach mogą występować problemy z wyswietlaniem!
+				<p className="text-xl text-center text-white">
+					Na telefonach, mniejszych ekranach mogą występować problemy z wyświetlaniem!
 				</p>
 			</div>
 			<canvas ref={canvasRef} width={canvasSize.width} height={canvasSize.height} className="border bg-black" />
@@ -607,7 +630,7 @@ export function JuliaSet() {
 	const [maxIter, setMaxIter] = useState(100)
 	const [cx, setCx] = useState(-0.7)
 	const [cy, setCy] = useState(0.27015)
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	const [windowWidth, setWindowWidth] = useState<number | null>(null)
 
 	const drawJulia = (
 		ctx: CanvasRenderingContext2D,
@@ -654,16 +677,19 @@ export function JuliaSet() {
 	}
 
 	useEffect(() => {
+		setWindowWidth(window.innerWidth)
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth)
 		}
-
 		window.addEventListener('resize', handleResize)
-
 		return () => {
 			window.removeEventListener('resize', handleResize)
 		}
 	}, [])
+
+	if (!windowWidth) {
+		return <div>Ładowanie Julii...</div>
+	}
 
 	const canvasSize = useMemo(() => {
 		const width = Math.min(windowWidth * 0.6, 800)
@@ -684,275 +710,264 @@ export function JuliaSet() {
 	return (
 		<div className="flex flex-col items-center">
 			<div className="mb-8">
-				<p className="text-xl text-center">
-					Na telefonach, mniejszych ekranach mogą występować problemy z wyswietlaniem!
+				<p className="text-xl text-center text-white">
+					Na telefonach, mniejszych ekranach mogą występować problemy z wyświetlaniem!
 				</p>
 			</div>
 			<canvas ref={canvasRef} width={canvasSize.width} height={canvasSize.height} className="border bg-black" />
-			<div className="mt-4">
-				<label htmlFor="iterations" className="text-white text-center">
-					Maksymalna liczba iteracji: {maxIter}
-				</label>
-				<input
-					type="range"
-					id="iterations"
-					min="50"
-					max="300"
-					value={maxIter}
-					onChange={e => setMaxIter(parseInt(e.target.value))}
-					className="ml-2"
-				/>
-			</div>
-			<div className="mt-4">
-				<label htmlFor="cx" className="text-white">
-					C Rzeczywiste: {cx}
-				</label>
-				<input
-					type="range"
-					id="cx"
-					min="-1.5"
-					max="1.5"
-					step="0.01"
-					value={cx}
-					onChange={e => setCx(parseFloat(e.target.value))}
-					className="ml-2"
-				/>
-			</div>
-			<div className="mt-4">
-				<label htmlFor="cy" className="text-white">
-					C Urojone: {cy}
-				</label>
-				<input
-					type="range"
-					id="cy"
-					min="-1.5"
-					max="1.5"
-					step="0.01"
-					value={cy}
-					onChange={e => setCy(parseFloat(e.target.value))}
-					className="ml-2"
-				/>
+			<div className="mt-4 space-y-4">
+				<div>
+					<label htmlFor="iterations" className="text-white">
+						Maksymalna liczba iteracji: {maxIter}
+					</label>
+					<input
+						type="range"
+						id="iterations"
+						min="50"
+						max="300"
+						value={maxIter}
+						onChange={e => setMaxIter(parseInt(e.target.value))}
+						className="ml-2"
+					/>
+				</div>
+				<div>
+					<label htmlFor="cx" className="text-white">
+						C Rzeczywiste: {cx}
+					</label>
+					<input
+						type="range"
+						id="cx"
+						min="-1.5"
+						max="1.5"
+						step="0.01"
+						value={cx}
+						onChange={e => setCx(parseFloat(e.target.value))}
+						className="ml-2"
+					/>
+				</div>
+				<div>
+					<label htmlFor="cy" className="text-white">
+						C Urojone: {cy}
+					</label>
+					<input
+						type="range"
+						id="cy"
+						min="-1.5"
+						max="1.5"
+						step="0.01"
+						value={cy}
+						onChange={e => setCy(parseFloat(e.target.value))}
+						className="ml-2"
+					/>
+				</div>
 			</div>
 		</div>
 	)
 }
 
 export function HilbertCurveSet() {
-	const Canvas = ({ width, height, depth }: { width: number; height: number; depth: number }) => {
-		const canvasRef = useRef<HTMLCanvasElement | null>(null)
+	const canvasRef = useRef<HTMLCanvasElement | null>(null)
+	const [depth, setDepth] = useState(1)
+	const [windowWidth, setWindowWidth] = useState<number | null>(null)
 
-		const drawHilbertCurve = useCallback(
-			(
-				ctx: CanvasRenderingContext2D,
-				x: number,
-				y: number,
-				xi: number,
-				xj: number,
-				yi: number,
-				yj: number,
-				n: number
-			) => {
-				if (n <= 0) {
-					const centerX = x + (xi + yi) / 2
-					const centerY = y + (xj + yj) / 2
-					ctx.lineTo(centerX, centerY)
-					ctx.stroke()
-					ctx.moveTo(centerX, centerY)
-				} else {
-					drawHilbertCurve(ctx, x, y, yi / 2, yj / 2, xi / 2, xj / 2, n - 1)
-					drawHilbertCurve(ctx, x + xi / 2, y + xj / 2, xi / 2, xj / 2, yi / 2, yj / 2, n - 1)
-					drawHilbertCurve(ctx, x + xi / 2 + yi / 2, y + xj / 2 + yj / 2, xi / 2, xj / 2, yi / 2, yj / 2, n - 1)
-					drawHilbertCurve(ctx, x + xi / 2 + yi, y + xj / 2 + yj, -yi / 2, -yj / 2, -xi / 2, -xj / 2, n - 1)
-				}
-			},
-			[]
-		)
-
-		useEffect(() => {
-			const canvas = canvasRef.current
-			if (canvas) {
-				const ctx = canvas.getContext('2d')
-				if (ctx) {
-					ctx.clearRect(0, 0, width, height)
-					ctx.beginPath()
-					ctx.strokeStyle = 'white'
-					ctx.lineWidth = 1
-
-					const size = Math.min(width, height) - 20
-					drawHilbertCurve(ctx, 10, 10, size, 0, 0, size, depth)
-				}
+	const drawHilbertCurve = useCallback(
+		(
+			ctx: CanvasRenderingContext2D,
+			x: number,
+			y: number,
+			xi: number,
+			xj: number,
+			yi: number,
+			yj: number,
+			n: number
+		) => {
+			if (n <= 0) {
+				const centerX = x + (xi + yi) / 2
+				const centerY = y + (xj + yj) / 2
+				ctx.lineTo(centerX, centerY)
+				ctx.stroke()
+				ctx.moveTo(centerX, centerY)
+			} else {
+				drawHilbertCurve(ctx, x, y, yi / 2, yj / 2, xi / 2, xj / 2, n - 1)
+				drawHilbertCurve(ctx, x + xi / 2, y + xj / 2, xi / 2, xj / 2, yi / 2, yj / 2, n - 1)
+				drawHilbertCurve(ctx, x + xi / 2 + yi / 2, y + xj / 2 + yj / 2, xi / 2, xj / 2, yi / 2, yj / 2, n - 1)
+				drawHilbertCurve(ctx, x + xi / 2 + yi, y + xj / 2 + yj, -yi / 2, -yj / 2, -xi / 2, -xj / 2, n - 1)
 			}
-		}, [width, height, depth, drawHilbertCurve])
-
-		return <canvas ref={canvasRef} width={width} height={height} style={{ backgroundColor: 'black' }} />
-	}
-
-	const [value, setValue] = useState(1)
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+		},
+		[]
+	)
 
 	useEffect(() => {
+		setWindowWidth(window.innerWidth)
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth)
 		}
-
 		window.addEventListener('resize', handleResize)
-
 		return () => {
 			window.removeEventListener('resize', handleResize)
 		}
 	}, [])
 
+	if (!windowWidth) {
+		return <div>Ładowanie krzywej Hilberta...</div>
+	}
+
 	const canvasSize = useMemo(() => {
 		const width = Math.min(windowWidth * 0.7, 800)
-		const height = width
-		return { width, height }
+		return { width, height: width }
 	}, [windowWidth])
 
+	useEffect(() => {
+		const canvas = canvasRef.current
+		if (canvas) {
+			const ctx = canvas.getContext('2d')
+			if (ctx) {
+				ctx.clearRect(0, 0, canvasSize.width, canvasSize.height)
+				ctx.beginPath()
+				ctx.strokeStyle = 'white'
+				ctx.lineWidth = 1
+				const size = Math.min(canvasSize.width, canvasSize.height) - 20
+				drawHilbertCurve(ctx, 10, 10, size, 0, 0, size, depth)
+			}
+		}
+	}, [canvasSize, depth, drawHilbertCurve])
+
 	return (
-		<div>
-			<Canvas width={canvasSize.width} height={canvasSize.height} depth={value} />
-			<div>
-				<div className="relative">Stopień krzywej: {value}</div>
-				<input type="range" value={value} onChange={e => setValue(parseInt(e.target.value))} min={1} max={5} />
+		<div className="flex flex-col items-center space-y-4">
+			<canvas ref={canvasRef} width={canvasSize.width} height={canvasSize.height} className="border bg-black" />
+			<div className="text-white">
+				<div>Stopień krzywej: {depth}</div>
+				<input
+					type="range"
+					value={depth}
+					onChange={e => setDepth(parseInt(e.target.value))}
+					min={1}
+					max={6}
+					className="mt-2"
+				/>
 			</div>
 		</div>
 	)
 }
 
 export function LorenzAttractor() {
-	const Canvas = ({ width, height }: { width: number; height: number }) => {
-		const canvasRef = useRef<HTMLCanvasElement | null>(null)
-		const animationFrameId = useRef<number | null>(null)
-
-		const drawLorenzAttractor = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
-			const sigma = 10
-			const rho = 28
-			const beta = 8 / 3
-
-			const dt = 0.01
-			let x = 0.1
-			let y = 0
-			let z = 0
-
-			let minX = x,
-				maxX = x,
-				minY = y,
-				maxY = y,
-				minZ = z,
-				maxZ = z
-			const tempPoints = []
-
-			for (let i = 0; i < 100; i++) {
-				const dx = sigma * (y - x) * dt
-				const dy = (x * (rho - z) - y) * dt
-				const dz = (x * y - beta * z) * dt
-				x += dx
-				y += dy
-				z += dz
-
-				minX = Math.min(minX, x)
-				maxX = Math.max(maxX, x)
-				minY = Math.min(minY, y)
-				maxY = Math.max(maxY, y)
-				minZ = Math.min(minZ, z)
-				maxZ = Math.max(maxZ, z)
-				tempPoints.push({ x, y, z })
-			}
-
-			const centerX = (minX + maxX) / 2
-			const centerZ = (minZ + maxZ) / 2
-
-			const scaleX = (width / (maxX - minX)) * 0.4
-			const scaleZ = (height / (maxZ - minZ)) * 0.4
-			const scale = Math.min(scaleX, scaleZ)
-
-			x = 0.1
-			y = 0
-			z = 0
-
-			ctx.strokeStyle = 'white'
-			ctx.lineWidth = 0.5
-
-			let points: { x: number; y: number }[] = []
-
-			const animate = () => {
-				const dx = sigma * (y - x) * dt
-				const dy = (x * (rho - z) - y) * dt
-				const dz = (x * y - beta * z) * dt
-
-				x += dx
-				y += dy
-				z += dz
-
-				const drawX = width / 2 + (x - centerX) * scale
-				const drawY = height / 2 - (z - centerZ) * scale
-
-				points.push({ x: drawX, y: drawY })
-
-				if (points.length > 1) {
-					ctx.beginPath()
-					ctx.moveTo(points[0].x, points[0].y)
-					for (let i = 1; i < points.length; i++) {
-						ctx.lineTo(points[i].x, points[i].y)
-					}
-					ctx.stroke()
-					points = [points[points.length - 1]]
-				} else {
-					ctx.beginPath()
-					ctx.moveTo(drawX, drawY)
-				}
-
-				animationFrameId.current = requestAnimationFrame(animate)
-			}
-
-			animate()
-		}
-
-		useEffect(() => {
-			const canvas = canvasRef.current
-			if (canvas) {
-				const ctx = canvas.getContext('2d')
-				if (ctx) {
-					ctx.clearRect(0, 0, width, height)
-					ctx.fillStyle = 'black'
-					ctx.fillRect(0, 0, width, height)
-					drawLorenzAttractor(ctx, width, height)
-				}
-			}
-
-			return () => {
-				if (animationFrameId.current) {
-					cancelAnimationFrame(animationFrameId.current)
-				}
-			}
-		}, [width, height])
-
-		return <canvas ref={canvasRef} width={width} height={height} style={{ backgroundColor: 'black' }} />
-	}
-
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	const canvasRef = useRef<HTMLCanvasElement | null>(null)
+	const animationFrameId = useRef<number | null>(null)
+	const [windowWidth, setWindowWidth] = useState<number | null>(null)
 
 	useEffect(() => {
-		const handleResize = () => {
-			setWindowWidth(window.innerWidth)
-		}
-
+		setWindowWidth(window.innerWidth)
+		const handleResize = () => setWindowWidth(window.innerWidth)
 		window.addEventListener('resize', handleResize)
-
-		return () => {
-			window.removeEventListener('resize', handleResize)
-		}
+		return () => window.removeEventListener('resize', handleResize)
 	}, [])
+
+	if (!windowWidth) {
+		return <div>Ładowanie atraktora Lorenza...</div>
+	}
 
 	const canvasSize = useMemo(() => {
 		const width = Math.min(windowWidth * 0.7, 800)
-		const height = width
-		return { width, height }
+		return { width, height: width }
 	}, [windowWidth])
 
+	useEffect(() => {
+		const sigma = 10
+		const rho = 28
+		const beta = 8 / 3
+		const dt = 0.01
+
+		let x = 0.1
+		let y = 0
+		let z = 0
+
+		const canvas = canvasRef.current
+		if (!canvas) return
+		const ctx = canvas.getContext('2d')
+		if (!ctx) return
+
+		// Pre-simulate to get bounds
+		let minX = x,
+			maxX = x,
+			minY = y,
+			maxY = y,
+			minZ = z,
+			maxZ = z
+		const tempPoints = []
+
+		for (let i = 0; i < 100; i++) {
+			const dx = sigma * (y - x) * dt
+			const dy = (x * (rho - z) - y) * dt
+			const dz = (x * y - beta * z) * dt
+			x += dx
+			y += dy
+			z += dz
+			minX = Math.min(minX, x)
+			maxX = Math.max(maxX, x)
+			minY = Math.min(minY, y)
+			maxY = Math.max(maxY, y)
+			minZ = Math.min(minZ, z)
+			maxZ = Math.max(maxZ, z)
+			tempPoints.push({ x, y, z })
+		}
+
+		const centerX = (minX + maxX) / 2
+		const centerZ = (minZ + maxZ) / 2
+		const scaleX = (canvasSize.width / (maxX - minX)) * 0.4
+		const scaleZ = (canvasSize.height / (maxZ - minZ)) * 0.4
+		const scale = Math.min(scaleX, scaleZ)
+
+		// Reset positions
+		x = 0.1
+		y = 0
+		z = 0
+		let points: { x: number; y: number }[] = []
+
+		ctx.clearRect(0, 0, canvasSize.width, canvasSize.height)
+		ctx.fillStyle = 'black'
+		ctx.fillRect(0, 0, canvasSize.width, canvasSize.height)
+		ctx.strokeStyle = 'white'
+		ctx.lineWidth = 0.5
+
+		const animate = () => {
+			const dx = sigma * (y - x) * dt
+			const dy = (x * (rho - z) - y) * dt
+			const dz = (x * y - beta * z) * dt
+
+			x += dx
+			y += dy
+			z += dz
+
+			const drawX = canvasSize.width / 2 + (x - centerX) * scale
+			const drawY = canvasSize.height / 2 - (z - centerZ) * scale
+
+			points.push({ x: drawX, y: drawY })
+
+			if (points.length > 1) {
+				ctx.beginPath()
+				ctx.moveTo(points[0].x, points[0].y)
+				for (let i = 1; i < points.length; i++) {
+					ctx.lineTo(points[i].x, points[i].y)
+				}
+				ctx.stroke()
+				points = [points[points.length - 1]]
+			}
+
+			animationFrameId.current = requestAnimationFrame(animate)
+		}
+
+		animate()
+
+		return () => {
+			if (animationFrameId.current) {
+				cancelAnimationFrame(animationFrameId.current)
+			}
+		}
+	}, [canvasSize])
+
 	return (
-		<div>
-			<Canvas width={canvasSize.width} height={canvasSize.height} />
+		<div className="flex flex-col items-center">
+			<canvas ref={canvasRef} width={canvasSize.width} height={canvasSize.height} className="border bg-black" />
 		</div>
 	)
 }
