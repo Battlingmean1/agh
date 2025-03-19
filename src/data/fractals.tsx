@@ -110,7 +110,7 @@ export const Fractals: FractalsType = {
 		title: 'Dywan Sierpińskiego',
 		path: 'dywan-sierpinskiego',
 		authorName: 'Wacław Sierpiński',
-		authorImage: '/images/fractalAuthors/Waclaw_Sierpinski.jpg',
+		authorImage: '/fractalAuthors/Waclaw_Sierpinski.jpg',
 		authorDescription:
 			'Wacław Sierpiński (1882 - 1969) był czołowym polskim matematykiem związanym z warszawską szkołą matematyczną. Pracował na Uniwersytecie Warszawskim, kierował Instytutem Matematycznym PAN i był członkiem wielu akademii nauk. Jego badania dotyczyły m.in. teorii liczb, analizy matematycznej oraz podstaw matematyki, zwłaszcza teorii mnogości i zagadnień nieskończoności. Opublikował setki prac, promował młodych naukowców i współtworzył ważne czasopisma matematyczne. Za swoje osiągnięcia został wielokrotnie odznaczony, m.in. Krzyżem Wielkim Orderu Odrodzenia Polski.',
 		authorURL: 'https://pl.wikipedia.org/wiki/Wac%C5%82aw_Sierpi%C5%84ski#',
@@ -179,7 +179,7 @@ export const Fractals: FractalsType = {
 		title: 'Krzywa Kocha',
 		path: 'krzywa-kocha',
 		authorName: 'Helge von Koch',
-		authorImage: '/images/fractalAuthors/Helge_von_Koch.jpg',
+		authorImage: '/fractalAuthors/Helge_von_Koch.jpg',
 		authorDescription: `Niels von Koch (1870 - 1924) był szwedzkim matematykiem, znanym przede wszystkim jako autor krzywej Kocha - jednego z pierwszych i najbardziej rozpoznawalnych fraktali, opisanego w 1904 roku w pracy „Une méthode géométrique élémentaire pour l'étude de certaines questions de la théorie des courbes plane”. Pisał również na tematy związane z teorią liczb, badał hipotezę Riemanna i zajmował się zagadnieniami dotyczącymi nieskończonych wyznaczników.`,
 		authorURL: 'https://pl.wikipedia.org/wiki/Helge_von_Koch',
 		definition: (
@@ -233,7 +233,7 @@ export const Fractals: FractalsType = {
 		title: 'Płatek Kocha',
 		path: 'platek-kocha',
 		authorName: 'Helge von Koch',
-		authorImage: '/images/fractalAuthors/Helge_von_Koch.jpg',
+		authorImage: '/fractalAuthors/Helge_von_Koch.jpg',
 		authorDescription: `Niels von Koch (1870 - 1924) był szwedzkim matematykiem, znanym przede wszystkim jako autor krzywej Kocha - jednego z pierwszych i najbardziej rozpoznawalnych fraktali, opisanego w 1904 roku w pracy „Une méthode géométrique élémentaire pour l'étude de certaines questions de la théorie des courbes plane”. Pisał również na tematy związane z teorią liczb, badał hipotezę Riemanna i zajmował się zagadnieniami dotyczącymi nieskończonych wyznaczników.`,
 		authorURL: 'https://pl.wikipedia.org/wiki/Helge_von_Koch',
 		definition: (
@@ -287,7 +287,7 @@ export const Fractals: FractalsType = {
 		title: 'Drzewo Binarne',
 		path: 'drzewo-binarne',
 		authorName: 'Nieznane',
-		authorImage: '/images/fractalAuthors/question-mark-2309040_640.jpg',
+		authorImage: '/fractalAuthors/question-mark-2309040_640.jpg',
 		authorDescription: `Brak informacji.`,
 		authorURL: 'https://pixabay.com/pl/photos/znak-zapytania-symbol-ikona-posta%C4%87-2309040/',
 		definition: (
@@ -342,7 +342,7 @@ export const Fractals: FractalsType = {
 		title: 'Zbiór Cantora',
 		path: 'zbior-cantora',
 		authorName: 'Georg Cantor',
-		authorImage: '/images/fractalAuthors/Matematiker_georg_cantor.jpg',
+		authorImage: '/fractalAuthors/Matematiker_georg_cantor.jpg',
 		authorDescription:
 			'Studiował w Darmstadt, Zurychu oraz Getyndze, a doktorat uzyskał w Berlinie w 1867 roku. Jego nauczycielami byli m.in. Karl Weierstrass, Ernst Eduard Kummer i Leopold Kronecker. Rozpoczął karierę pedagogiczną w berlińskim gimnazjum, a przez ponad trzydzieści lat wykładał na uniwersytecie w Halle (Saale). Utrzymywał bliskie relacje z Richardem Dedekindem. Cantor odegrał istotną rolę w tworzeniu fundamentów współczesnej matematyki, zwłaszcza dzięki swojemu wkładowi w rozwój teorii mnogości. Zmarł 6 stycznia 1918 roku po przebytym zawale serca.',
 		authorURL: 'https://pl.wikipedia.org/wiki/Georg_Cantor',
@@ -412,7 +412,7 @@ export const Fractals: FractalsType = {
 		title: 'Zbiór Mandelbrota',
 		path: 'zbior-mandelbrota',
 		authorName: 'Benoît Mandelbrot',
-		authorImage: '/images/fractalAuthors/Benoit_Mandelbrot,_TED_2010.jpg',
+		authorImage: '/fractalAuthors/Benoit_Mandelbrot,_TED_2010.jpg',
 		authorDescription:
 			'Benoît B. Mandelbrot (urodzony jako Benedykt, 1924 - 2010) był matematykiem francusko-amerykańskim żydowskiego pochodzenia, uważanym za twórcę geometrii fraktalnej. To on opisał zbiór Mandelbrota i ukuł termin „fraktal”. Był bratankiem Szolema Mandelbrojta. Wychowywał się w Polsce (1924 - 1936), mieszkał we Francji (1936 - 1957), a następnie pracował w USA dla IBM, gdzie wykorzystał komputery do badań inspirowanych pracami Julii i Fatou. Za swoje dokonania otrzymał liczne wyróżnienia, m.in. Nagrodę Wolfa w fizyce (1993), Nagrodę Japońską (2003) oraz 16 doktoratów honoris causa.',
 		authorURL: 'https://pl.wikipedia.org/wiki/Beno%C3%AEt_Mandelbrot',
@@ -498,7 +498,7 @@ export const Fractals: FractalsType = {
 		title: 'Zbiór Julii',
 		path: 'zbior-julii',
 		authorName: 'Gaston Julia',
-		authorImage: '/images/fractalAuthors/Gustav_Herglotz,_Gaston_Julia.jpeg',
+		authorImage: '/fractalAuthors/Gustav_Herglotz,_Gaston_Julia.jpeg',
 		authorDescription: `Gaston Maurice Julia (1893 - 1978) był francuskim matematykiem i prekursorem teorii układów dynamicznych, profesorem École Polytechnique. Podczas I wojny światowej, jako żołnierz, stracił nos, co skutkowało noszeniem skórzanej przepaski do końca życia. Jego najsłynniejsza praca, "Mémoire sur l'itération des fonctions rationnelles", opisała własności fraktala, który później nazwano zbiorem Julii.`,
 		authorURL: 'https://en.wikipedia.org/wiki/Gaston_Julia',
 		definition: (
@@ -577,7 +577,7 @@ export const Fractals: FractalsType = {
 		title: 'Krzywa Hilberta',
 		path: 'krzywa-hilberta',
 		authorName: 'David Hilbert',
-		authorImage: '/images/fractalAuthors/Hilbert.jpg',
+		authorImage: '/fractalAuthors/Hilbert.jpg',
 		authorDescription: `Hilbert rozpoczął karierę w Królewcu, gdzie został profesorem, a następnie przeniósł się do Getyndze. Zajmował się teorią niezmienników, udowadniając istnienie skończonej bazy i formułując twierdzenie o zerach w geometrii algebraicznej. W 1899 roku opublikował „Grundlagen der Geometrie”, ustanawiając aksjomatyczne podstawy geometrii, a jego prace przyczyniły się do rozwoju przestrzeni Hilberta i rozwiązania problemu Waringa. Na Międzynarodowym Kongresie Matematyków w 1900 roku przedstawił słynne problemy, a w 1915 sformułował równania pola dla ogólnej teorii względności, jednocześnie będąc oddanym wykładowcą.`,
 		authorURL: 'https://pl.wikipedia.org/wiki/David_Hilbert',
 		definition: (
@@ -641,7 +641,7 @@ export const Fractals: FractalsType = {
 		title: 'Atraktory Lorentza',
 		path: 'atraktory-lorentza',
 		authorName: 'Edward Norton Lorenz',
-		authorImage: '/images/fractalAuthors/Edward_lorenz.jpg',
+		authorImage: '/fractalAuthors/Edward_lorenz.jpg',
 		authorDescription: `Edward Norton Lorenz (1917 - 2008) był amerykańskim matematykiem i meteorologiem, który stworzył podstawy przewidywania pogody oraz komputerowej meteorologii. Jego badania nad teorią chaosu, ujawniające wrażliwość układów dynamicznych na warunki początkowe, przyniosły mu Nagrodę Kyoto w 1991 roku. Pochodząc z naukowej rodziny, studiował matematykę na Dartmouth i Harvardzie, a meteorologię na MIT, gdzie obronił doktorat w 1948 roku. Pracował jako meteorolog w czasie II wojny światowej, a później mieszkał w Cambridge, Massachusetts, z żoną i trójką dzieci, aż do śmierci w 2008 roku.`,
 		authorURL: 'https://en.wikipedia.org/wiki/Edward_Norton_Lorenz',
 		definition: (
@@ -766,11 +766,11 @@ export const FractalsOnADailyBasis: FractalsOnADailyBasisType = {
 				name: 'Chmury',
 				images: [
 					{
-						src: '/images/fractals/nature/clouds.jpg',
+						src: '/fractals/nature/clouds.jpg',
 						copyrightLink: 'https://ciekawe.org/2015/11/02/fraktalne-wzory-w-przyrodzie/',
 					},
 					{
-						src: '/images/fractals/nature/Actinoform_cloud.jpg',
+						src: '/fractals/nature/Actinoform_cloud.jpg',
 						copyrightLink: 'https://pl.wikipedia.org/wiki/Fraktal#/media/Plik:Actinoform_cloud.jpg',
 					},
 				],
@@ -779,11 +779,11 @@ export const FractalsOnADailyBasis: FractalsOnADailyBasisType = {
 				name: 'Unerwienie liści',
 				images: [
 					{
-						src: '/images/fractals/nature/leaf_1_web.jpg',
+						src: '/fractals/nature/leaf_1_web.jpg',
 						copyrightLink: 'https://pl.wikipedia.org/wiki/Li%C5%9B%C4%87',
 					},
 					{
-						src: '/images/fractals/nature/Blatt-wiki.jpg',
+						src: '/fractals/nature/Blatt-wiki.jpg',
 						copyrightLink: 'https://pl.wikipedia.org/wiki/Li%C5%9B%C4%87',
 					},
 				],
@@ -792,12 +792,12 @@ export const FractalsOnADailyBasis: FractalsOnADailyBasisType = {
 				name: 'Płatki śniegu',
 				images: [
 					{
-						src: '/images/fractals/nature/snowflake.jpg',
+						src: '/fractals/nature/snowflake.jpg',
 						copyrightLink:
 							'https://www.ekologia.pl/srodowisko/platki-sniegu-opis-ksztalty-i-zdjecia-jak-powstaje-snieg/',
 					},
 					{
-						src: '/images/fractals/nature/snowflake2.jpeg',
+						src: '/fractals/nature/snowflake2.jpeg',
 						copyrightLink:
 							'https://www.national-geographic.pl/przyroda/platki-sniegu-w-najlepszej-mozliwej-rozdzielczosci-aby-je-uchwycic-zbudowano-specjalny-aparat/',
 					},
@@ -807,12 +807,12 @@ export const FractalsOnADailyBasis: FractalsOnADailyBasisType = {
 				name: 'Mróz na szybach',
 				images: [
 					{
-						src: '/images/fractals/nature/Mroz-maluje-na-szybie-juz-tylko-w-internecie-ZDJECIA-3.jpg',
+						src: '/fractals/nature/Mroz-maluje-na-szybie-juz-tylko-w-internecie-ZDJECIA-3.jpg',
 						copyrightLink:
 							'https://www.radiowroclaw.pl/articles/view/48389/Mroz-maluje-na-szybie-juz-tylko-w-internecie-ZDJeCIA',
 					},
 					{
-						src: '/images/fractals/nature/mroz_na-oknie.jpg',
+						src: '/fractals/nature/mroz_na-oknie.jpg',
 						copyrightLink: 'https://sklep.winkhaus.pl/pl/blog/post/mroz-na-oknie-sposoby-na-zamarzniete-okno',
 					},
 				],
@@ -821,11 +821,11 @@ export const FractalsOnADailyBasis: FractalsOnADailyBasisType = {
 				name: 'Fiordy',
 				images: [
 					{
-						src: '/images/fractals/nature/Fjords_5.81273E_61.84781N.jpg',
+						src: '/fractals/nature/Fjords_5.81273E_61.84781N.jpg',
 						copyrightLink: 'https://pl.wikipedia.org/wiki/Fraktal#/media/Plik:Fjords_5.81273E_61.84781N.jpg',
 					},
 					{
-						src: '/images/fractals/nature/Fjords_highlighted_by_snow.jpg',
+						src: '/fractals/nature/Fjords_highlighted_by_snow.jpg',
 						copyrightLink: 'https://pl.wikipedia.org/wiki/Fraktal#/media/Plik:Fjords_highlighted_by_snow.jpg',
 					},
 				],
@@ -834,11 +834,11 @@ export const FractalsOnADailyBasis: FractalsOnADailyBasisType = {
 				name: 'Błyskawice',
 				images: [
 					{
-						src: '/images/fractals/nature/pio.jpg',
+						src: '/fractals/nature/pio.jpg',
 						copyrightLink: 'https://kalejdoskopmatematyczny.pk.edu.pl/fraktale/',
 					},
 					{
-						src: '/images/fractals/nature/blyskawica.jpg',
+						src: '/fractals/nature/blyskawica.jpg',
 						copyrightLink: 'http://student.krk.pl/013-Zmilczak-Kety/index.html',
 					},
 				],
@@ -854,11 +854,11 @@ export const FractalsOnADailyBasis: FractalsOnADailyBasisType = {
 				name: 'Neurony',
 				images: [
 					{
-						src: '/images/fractals/medicine/neuron.jpg',
+						src: '/fractals/medicine/neuron.jpg',
 						copyrightLink: 'http://student.krk.pl/013-Zmilczak-Kety/index.html',
 					},
 					{
-						src: '/images/fractals/medicine/neurons.png',
+						src: '/fractals/medicine/neurons.png',
 						copyrightLink:
 							'https://naukawpolsce.pl/aktualnosci/news%2C33378%2Cnawet-dorosly-mozg-potrafi-wytwarzac-nowe-neurony.html',
 					},
@@ -868,11 +868,11 @@ export const FractalsOnADailyBasis: FractalsOnADailyBasisType = {
 				name: 'Chromosomy',
 				images: [
 					{
-						src: '/images/fractals/medicine/Fotolia_18622944_XS.jpg',
+						src: '/fractals/medicine/Fotolia_18622944_XS.jpg',
 						copyrightLink: 'https://www.testdna.pl/zjawisko-lamliwego-chromosomu-y-przyczyna-jego-utraty/',
 					},
 					{
-						src: '/images/fractals/medicine/Niedoceniany-chromosom-Y.jpg',
+						src: '/fractals/medicine/Niedoceniany-chromosom-Y.jpg',
 						copyrightLink: 'https://ziebaclinic.pl/niedoceniany-chromosom-y/',
 					},
 				],
@@ -881,11 +881,11 @@ export const FractalsOnADailyBasis: FractalsOnADailyBasisType = {
 				name: 'Płuca',
 				images: [
 					{
-						src: '/images/fractals/medicine/człowiek.jpg',
+						src: '/fractals/medicine/człowiek.jpg',
 						copyrightLink: 'https://home.agh.edu.pl/~zobmat/2019/wyr_2/',
 					},
 					{
-						src: '/images/fractals/medicine/pobrane.png',
+						src: '/fractals/medicine/pobrane.png',
 						copyrightLink:
 							'https://www.aptelia.pl/czytelnia/a721-Wszystko_o_plucach__budowa_funkcje_mozliwe_choroby_i_sposoby_dbania_o_pluca',
 					},
@@ -902,35 +902,35 @@ export const FractalsOnADailyBasis: FractalsOnADailyBasisType = {
 				name: 'Grafika Komputerowa',
 				images: [
 					{
-						src: '/images/fractals/graphics/Apophysis_fractal_flame.jpg',
+						src: '/fractals/graphics/Apophysis_fractal_flame.jpg',
 						copyrightLink: 'https://pl.wikipedia.org/wiki/Fraktal#/media/Plik:Apophysis_fractal_flame.jpg',
 					},
 					{
-						src: '/images/fractals/graphics/Fractal_Sentinel_SterlingW3165.jpg',
+						src: '/fractals/graphics/Fractal_Sentinel_SterlingW3165.jpg',
 						copyrightLink: 'https://pl.wikipedia.org/wiki/Fraktal#/media/Plik:Fractal_Sentinel_SterlingW3165.jpg',
 					},
 					{
-						src: '/images/fractals/graphics/Fractal_Flame_linear_yaprak001.jpg',
+						src: '/fractals/graphics/Fractal_Flame_linear_yaprak001.jpg',
 						copyrightLink: 'https://pl.wikipedia.org/wiki/Fraktal#/media/Plik:Fractal_Flame_linear_yaprak001.jpg',
 					},
 					{
-						src: '/images/fractals/graphics/Electricsheep-21194.jpg',
+						src: '/fractals/graphics/Electricsheep-21194.jpg',
 						copyrightLink: 'https://pl.wikipedia.org/wiki/Fraktal#/media/Plik:Electricsheep-21194.jpg',
 					},
 					{
-						src: '/images/fractals/graphics/Fractal_Flame_linear_kabuklu001.jpg',
+						src: '/fractals/graphics/Fractal_Flame_linear_kabuklu001.jpg',
 						copyrightLink: 'https://pl.wikipedia.org/wiki/Fraktal#/media/Plik:Fractal_Flame_linear_kabuklu001.jpg',
 					},
 					{
-						src: '/images/fractals/graphics/Electricsheep-24265.jpg',
+						src: '/fractals/graphics/Electricsheep-24265.jpg',
 						copyrightLink: 'https://pl.wikipedia.org/wiki/Fraktal#/media/Plik:Electricsheep-24265.jpg',
 					},
 					{
-						src: '/images/fractals/graphics/Fractal_Flame_linear_kelebek003.jpg',
+						src: '/fractals/graphics/Fractal_Flame_linear_kelebek003.jpg',
 						copyrightLink: 'https://pl.wikipedia.org/wiki/Fraktal#/media/Plik:Fractal_Flame_linear_kelebek003.jpg',
 					},
 					{
-						src: '/images/fractals/graphics/Hidden_Mandarin_fractal_Sterling2_3365.jpg',
+						src: '/fractals/graphics/Hidden_Mandarin_fractal_Sterling2_3365.jpg',
 						copyrightLink:
 							'https://pl.wikipedia.org/wiki/Fraktal#/media/Plik:Hidden_Mandarin_fractal_Sterling2_3365.jpg',
 					},
