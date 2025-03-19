@@ -45,7 +45,7 @@ export const Fractals: FractalsType = {
 		title: 'Trójkąt Sierpińskiego',
 		path: 'trojkat-sierpinskiego',
 		authorName: 'Wacław Sierpiński',
-		authorImage: '/images/fractalAuthors/Waclaw_Sierpinski.jpg',
+		authorImage: '/public/images/fractalAuthors/Waclaw_Sierpinski.jpg',
 		authorDescription:
 			'Wacław Sierpiński (1882 - 1969) był czołowym polskim matematykiem związanym z warszawską szkołą matematyczną. Pracował na Uniwersytecie Warszawskim, kierował Instytutem Matematycznym PAN i był członkiem wielu akademii nauk. Jego badania dotyczyły m.in. teorii liczb, analizy matematycznej oraz podstaw matematyki, zwłaszcza teorii mnogości i zagadnień nieskończoności. Opublikował setki prac, promował młodych naukowców i współtworzył ważne czasopisma matematyczne. Za swoje osiągnięcia został wielokrotnie odznaczony, m.in. Krzyżem Wielkim Orderu Odrodzenia Polski.',
 		authorURL: 'https://pl.wikipedia.org/wiki/Wac%C5%82aw_Sierpi%C5%84ski#',
@@ -110,7 +110,7 @@ export const Fractals: FractalsType = {
 		title: 'Dywan Sierpińskiego',
 		path: 'dywan-sierpinskiego',
 		authorName: 'Wacław Sierpiński',
-		authorImage: '/images/fractalAuthors/Waclaw_Sierpinski.jpg',
+		authorImage: '/public/images/fractalAuthors/Waclaw_Sierpinski.jpg',
 		authorDescription:
 			'Wacław Sierpiński (1882 - 1969) był czołowym polskim matematykiem związanym z warszawską szkołą matematyczną. Pracował na Uniwersytecie Warszawskim, kierował Instytutem Matematycznym PAN i był członkiem wielu akademii nauk. Jego badania dotyczyły m.in. teorii liczb, analizy matematycznej oraz podstaw matematyki, zwłaszcza teorii mnogości i zagadnień nieskończoności. Opublikował setki prac, promował młodych naukowców i współtworzył ważne czasopisma matematyczne. Za swoje osiągnięcia został wielokrotnie odznaczony, m.in. Krzyżem Wielkim Orderu Odrodzenia Polski.',
 		authorURL: 'https://pl.wikipedia.org/wiki/Wac%C5%82aw_Sierpi%C5%84ski#',
@@ -179,7 +179,7 @@ export const Fractals: FractalsType = {
 		title: 'Krzywa Kocha',
 		path: 'krzywa-kocha',
 		authorName: 'Helge von Koch',
-		authorImage: '/images/fractalAuthors/Helge_von_Koch.jpg',
+		authorImage: '/public/images/fractalAuthors/Helge_von_Koch.jpg',
 		authorDescription: `Niels von Koch (1870 - 1924) był szwedzkim matematykiem, znanym przede wszystkim jako autor krzywej Kocha - jednego z pierwszych i najbardziej rozpoznawalnych fraktali, opisanego w 1904 roku w pracy „Une méthode géométrique élémentaire pour l'étude de certaines questions de la théorie des courbes plane”. Pisał również na tematy związane z teorią liczb, badał hipotezę Riemanna i zajmował się zagadnieniami dotyczącymi nieskończonych wyznaczników.`,
 		authorURL: 'https://pl.wikipedia.org/wiki/Helge_von_Koch',
 		definition: (
@@ -233,7 +233,7 @@ export const Fractals: FractalsType = {
 		title: 'Płatek Kocha',
 		path: 'platek-kocha',
 		authorName: 'Helge von Koch',
-		authorImage: '/images/fractalAuthors/Helge_von_Koch.jpg',
+		authorImage: '/public/images/fractalAuthors/Helge_von_Koch.jpg',
 		authorDescription: `Niels von Koch (1870 - 1924) był szwedzkim matematykiem, znanym przede wszystkim jako autor krzywej Kocha - jednego z pierwszych i najbardziej rozpoznawalnych fraktali, opisanego w 1904 roku w pracy „Une méthode géométrique élémentaire pour l'étude de certaines questions de la théorie des courbes plane”. Pisał również na tematy związane z teorią liczb, badał hipotezę Riemanna i zajmował się zagadnieniami dotyczącymi nieskończonych wyznaczników.`,
 		authorURL: 'https://pl.wikipedia.org/wiki/Helge_von_Koch',
 		definition: (
@@ -287,7 +287,7 @@ export const Fractals: FractalsType = {
 		title: 'Drzewo Binarne',
 		path: 'drzewo-binarne',
 		authorName: 'Nieznane',
-		authorImage: '/images/fractalAuthors/question-mark-2309040_640.jpg',
+		authorImage: '/public/images/fractalAuthors/question-mark-2309040_640.jpg',
 		authorDescription: `Brak informacji.`,
 		authorURL: 'https://pixabay.com/pl/photos/znak-zapytania-symbol-ikona-posta%C4%87-2309040/',
 		definition: (
@@ -342,7 +342,7 @@ export const Fractals: FractalsType = {
 		title: 'Zbiór Cantora',
 		path: 'zbior-cantora',
 		authorName: 'Georg Cantor',
-		authorImage: '/images/fractalAuthors/Matematiker_georg_cantor.jpg',
+		authorImage: '/public/images/fractalAuthors/Matematiker_georg_cantor.jpg',
 		authorDescription:
 			'Studiował w Darmstadt, Zurychu oraz Getyndze, a doktorat uzyskał w Berlinie w 1867 roku. Jego nauczycielami byli m.in. Karl Weierstrass, Ernst Eduard Kummer i Leopold Kronecker. Rozpoczął karierę pedagogiczną w berlińskim gimnazjum, a przez ponad trzydzieści lat wykładał na uniwersytecie w Halle (Saale). Utrzymywał bliskie relacje z Richardem Dedekindem. Cantor odegrał istotną rolę w tworzeniu fundamentów współczesnej matematyki, zwłaszcza dzięki swojemu wkładowi w rozwój teorii mnogości. Zmarł 6 stycznia 1918 roku po przebytym zawale serca.',
 		authorURL: 'https://pl.wikipedia.org/wiki/Georg_Cantor',
@@ -412,7 +412,7 @@ export const Fractals: FractalsType = {
 		title: 'Zbiór Mandelbrota',
 		path: 'zbior-mandelbrota',
 		authorName: 'Benoît Mandelbrot',
-		authorImage: '/images/fractalAuthors/Benoit_Mandelbrot,_TED_2010.jpg',
+		authorImage: '/public/images/fractalAuthors/Benoit_Mandelbrot,_TED_2010.jpg',
 		authorDescription:
 			'Benoît B. Mandelbrot (urodzony jako Benedykt, 1924 - 2010) był matematykiem francusko-amerykańskim żydowskiego pochodzenia, uważanym za twórcę geometrii fraktalnej. To on opisał zbiór Mandelbrota i ukuł termin „fraktal”. Był bratankiem Szolema Mandelbrojta. Wychowywał się w Polsce (1924 - 1936), mieszkał we Francji (1936 - 1957), a następnie pracował w USA dla IBM, gdzie wykorzystał komputery do badań inspirowanych pracami Julii i Fatou. Za swoje dokonania otrzymał liczne wyróżnienia, m.in. Nagrodę Wolfa w fizyce (1993), Nagrodę Japońską (2003) oraz 16 doktoratów honoris causa.',
 		authorURL: 'https://pl.wikipedia.org/wiki/Beno%C3%AEt_Mandelbrot',
@@ -498,7 +498,7 @@ export const Fractals: FractalsType = {
 		title: 'Zbiór Julii',
 		path: 'zbior-julii',
 		authorName: 'Gaston Julia',
-		authorImage: '/images/fractalAuthors/Gustav_Herglotz,_Gaston_Julia.jpeg',
+		authorImage: '/public/images/fractalAuthors/Gustav_Herglotz,_Gaston_Julia.jpeg',
 		authorDescription: `Gaston Maurice Julia (1893 - 1978) był francuskim matematykiem i prekursorem teorii układów dynamicznych, profesorem École Polytechnique. Podczas I wojny światowej, jako żołnierz, stracił nos, co skutkowało noszeniem skórzanej przepaski do końca życia. Jego najsłynniejsza praca, "Mémoire sur l'itération des fonctions rationnelles", opisała własności fraktala, który później nazwano zbiorem Julii.`,
 		authorURL: 'https://en.wikipedia.org/wiki/Gaston_Julia',
 		definition: (
@@ -577,7 +577,7 @@ export const Fractals: FractalsType = {
 		title: 'Krzywa Hilberta',
 		path: 'krzywa-hilberta',
 		authorName: 'David Hilbert',
-		authorImage: '/images/fractalAuthors/Hilbert.jpg',
+		authorImage: '/public/images/fractalAuthors/Hilbert.jpg',
 		authorDescription: `Hilbert rozpoczął karierę w Królewcu, gdzie został profesorem, a następnie przeniósł się do Getyndze. Zajmował się teorią niezmienników, udowadniając istnienie skończonej bazy i formułując twierdzenie o zerach w geometrii algebraicznej. W 1899 roku opublikował „Grundlagen der Geometrie”, ustanawiając aksjomatyczne podstawy geometrii, a jego prace przyczyniły się do rozwoju przestrzeni Hilberta i rozwiązania problemu Waringa. Na Międzynarodowym Kongresie Matematyków w 1900 roku przedstawił słynne problemy, a w 1915 sformułował równania pola dla ogólnej teorii względności, jednocześnie będąc oddanym wykładowcą.`,
 		authorURL: 'https://pl.wikipedia.org/wiki/David_Hilbert',
 		definition: (
@@ -641,7 +641,7 @@ export const Fractals: FractalsType = {
 		title: 'Atraktory Lorentza',
 		path: 'atraktory-lorentza',
 		authorName: 'Edward Norton Lorenz',
-		authorImage: '/images/fractalAuthors/Edward_lorenz.jpg',
+		authorImage: '/public/images/fractalAuthors/Edward_lorenz.jpg',
 		authorDescription: `Edward Norton Lorenz (1917 - 2008) był amerykańskim matematykiem i meteorologiem, który stworzył podstawy przewidywania pogody oraz komputerowej meteorologii. Jego badania nad teorią chaosu, ujawniające wrażliwość układów dynamicznych na warunki początkowe, przyniosły mu Nagrodę Kyoto w 1991 roku. Pochodząc z naukowej rodziny, studiował matematykę na Dartmouth i Harvardzie, a meteorologię na MIT, gdzie obronił doktorat w 1948 roku. Pracował jako meteorolog w czasie II wojny światowej, a później mieszkał w Cambridge, Massachusetts, z żoną i trójką dzieci, aż do śmierci w 2008 roku.`,
 		authorURL: 'https://en.wikipedia.org/wiki/Edward_Norton_Lorenz',
 		definition: (
