@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 }
 
 type Props = {
-	params: { name: string }
+	params: Promise<{ name: string }>
 }
 
 export default async function Page({ params }: Props) {
