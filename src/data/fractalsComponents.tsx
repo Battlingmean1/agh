@@ -244,11 +244,11 @@ export function KochCurve() {
 		return { width, height }
 	}, [windowWidth])
 
+	const [value, setValue] = useState(0)
+
 	if (!canvasSize) {
 		return <div>Ładowanie krzywej...</div>
 	}
-
-	const [value, setValue] = useState(0)
 
 	return (
 		<div>
@@ -353,10 +353,11 @@ export function KochSnowflake() {
 		return { width, height }
 	}, [windowWidth])
 
+	const [value, setValue] = useState(0)
+
 	if (!canvasSize) {
 		return <div>Ładowanie płatka...</div>
 	}
-	const [value, setValue] = useState(0)
 
 	return (
 		<div>
@@ -435,11 +436,11 @@ export function BinaryTree() {
 		return { width, height }
 	}, [windowWidth])
 
+	const [value, setValue] = useState(0)
+
 	if (!canvasSize) {
 		return <div>Ładowanie drzewa...</div>
 	}
-
-	const [value, setValue] = useState(0)
 
 	return (
 		<div className="flex flex-col items-center">
@@ -518,10 +519,11 @@ export function CantorSet() {
 		return { width, height }
 	}, [windowWidth])
 
+	const [value, setValue] = useState(0)
+
 	if (!canvasSize) {
 		return <div>Ładowanie zbioru Cantora...</div>
 	}
-	const [value, setValue] = useState(0)
 
 	return (
 		<div>
@@ -598,11 +600,9 @@ export function MandelbrotSet() {
 		return { width, height }
 	}, [windowWidth])
 
-	if (!canvasSize) {
-		return <div>Ładowanie Mandelbrota...</div>
-	}
-
 	useEffect(() => {
+		if (!canvasSize) return
+
 		const canvas = canvasRef.current
 		if (canvas) {
 			const ctx = canvas.getContext('2d')
@@ -611,6 +611,10 @@ export function MandelbrotSet() {
 			}
 		}
 	}, [maxIter, canvasSize])
+
+	if (!canvasSize) {
+		return <div>Ładowanie Mandelbrota...</div>
+	}
 
 	return (
 		<div className="flex flex-col items-center">
@@ -839,11 +843,9 @@ export function HilbertCurveSet() {
 		return { width, height: width }
 	}, [windowWidth])
 
-	if (!canvasSize) {
-		return <div>Ładowanie krzywej Hilberta...</div>
-	}
-
 	useEffect(() => {
+		if (!canvasSize) return
+
 		const canvas = canvasRef.current
 		if (canvas) {
 			const ctx = canvas.getContext('2d')
@@ -857,6 +859,10 @@ export function HilbertCurveSet() {
 			}
 		}
 	}, [canvasSize, depth, drawHilbertCurve])
+
+	if (!canvasSize) {
+		return <div>Ładowanie krzywej Hilberta...</div>
+	}
 
 	return (
 		<div className="flex flex-col items-center space-y-4">
