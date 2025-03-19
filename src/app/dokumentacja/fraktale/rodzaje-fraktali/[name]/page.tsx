@@ -4,8 +4,23 @@ import Image from 'next/image'
 import Link from 'next/link'
 import TextHoverHelper from '@/components/TextHoverHelper'
 
+export async function generateStaticParams() {
+	return [
+		{ name: 'trojkat-sierpinskiego' },
+		{ name: 'dywan-sierpinskiego' },
+		{ name: 'krzywa-kocha' },
+		{ name: 'platek-kocha' },
+		{ name: 'drzewo-binarne' },
+		{ name: 'zbior-cantora' },
+		{ name: 'zbior-mandelbrota' },
+		{ name: 'zbior-julii' },
+		{ name: 'krzywa-hilberta' },
+		{ name: 'atraktory-lorentza' },
+	]
+}
+
 type Props = {
-	params: Promise<{ name: string }>
+	params: { name: string }
 }
 
 export default async function Page({ params }: Props) {
