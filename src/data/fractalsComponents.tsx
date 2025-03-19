@@ -126,9 +126,11 @@ export function SierpinskiCarpet() {
 	}
 
 	const [value, setValue] = useState(0)
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	const [windowWidth, setWindowWidth] = useState<number | null>(null)
 
 	useEffect(() => {
+		setWindowWidth(window.innerWidth)
+
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth)
 		}
@@ -141,10 +143,15 @@ export function SierpinskiCarpet() {
 	}, [])
 
 	const canvasSize = useMemo(() => {
+		if (!windowWidth) return { width: 300, height: 300 }
 		const width = Math.min(windowWidth * 0.6, 600)
 		const height = width
 		return { width, height }
 	}, [windowWidth])
+
+	if (!windowWidth) {
+		return null
+	}
 
 	return (
 		<div>
