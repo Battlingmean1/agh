@@ -150,7 +150,11 @@ export function SierpinskiCarpet() {
 	}, [windowWidth])
 
 	if (!windowWidth) {
-		return null
+		return (
+			<div>
+				<p className="text-2xl">Trwa ładowanie...</p>
+			</div>
+		)
 	}
 
 	return (
