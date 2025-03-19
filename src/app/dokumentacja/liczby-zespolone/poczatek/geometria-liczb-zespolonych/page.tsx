@@ -24,7 +24,7 @@ export default function page() {
 				</p>
 				<div className="flex flex-col items-center justify-center pt-10 pb-6">
 					<ImageCard
-						src="/images/complexNumbers/geometry/plaszczyzna_zespolona1.png"
+						src="/complexNumbers/geometry/plaszczyzna_zespolona1.png"
 						copyrightLink="https://www.matemaks.pl/interpretacja-geometryczna-liczby-zespolonej.html"
 					/>
 				</div>
@@ -33,7 +33,7 @@ export default function page() {
 				</p>
 				<div className="flex flex-col items-center justify-center pt-10 pb-6">
 					<ImageCard
-						src="/images/complexNumbers/geometry/plaszczyzna_zespolona2.png"
+						src="/complexNumbers/geometry/plaszczyzna_zespolona2.png"
 						copyrightLink="https://www.matemaks.pl/interpretacja-geometryczna-liczby-zespolonej.html"
 					/>
 				</div>
@@ -42,7 +42,7 @@ export default function page() {
 				</p>
 				<div className="flex flex-col items-center justify-center pt-10 pb-6">
 					<ImageCard
-						src="/images/complexNumbers/geometry/plaszczyzna_zespolona3.png"
+						src="/complexNumbers/geometry/plaszczyzna_zespolona3.png"
 						copyrightLink="https://www.matemaks.pl/interpretacja-geometryczna-liczby-zespolonej.html"
 					/>
 				</div>
@@ -76,7 +76,7 @@ export default function page() {
 				</p>
 				<div className="flex flex-col items-center justify-center pt-10 pb-6">
 					<ImageCard
-						src="/images/complexNumbers/geometry/arg_wzory1.png"
+						src="/complexNumbers/geometry/arg_wzory1.png"
 						copyrightLink="https://www.matemaks.pl/interpretacja-geometryczna-liczby-zespolonej.html"
 					/>
 				</div>
@@ -130,7 +130,7 @@ export default function page() {
 				</p>
 				<div className="flex flex-col items-center justify-center pt-10 pb-6">
 					<ImageCard
-						src="/images/complexNumbers/geometry/interpretacja_geometryczna_przyklad1.png"
+						src="/complexNumbers/geometry/interpretacja_geometryczna_przyklad1.png"
 						copyrightLink="https://www.matemaks.pl/interpretacja-geometryczna-liczby-zespolonej.html"
 					/>
 				</div>
@@ -179,7 +179,7 @@ export default function page() {
 					<div className="flex flex-col items-center justify-center pt-10 pb-6">
 						<div className="flex flex-col items-center justify-center pt-10 pb-6">
 							<ImageCard
-								src="/images/complexNumbers/geometry/interpretacja_geometryczna_przyklad1e.png"
+								src="/complexNumbers/geometry/interpretacja_geometryczna_przyklad1e.png"
 								copyrightLink="https://www.matemaks.pl/interpretacja-geometryczna-liczby-zespolonej.html"
 							/>
 						</div>
@@ -193,7 +193,7 @@ export default function page() {
 					<div className="flex flex-col items-center justify-center pt-10 pb-6">
 						<div className="flex flex-col items-center justify-center pt-10 pb-6">
 							<ImageCard
-								src="/images/complexNumbers/geometry/interpretacja_geometryczna_przyklad1f.png"
+								src="/complexNumbers/geometry/interpretacja_geometryczna_przyklad1f.png"
 								copyrightLink="https://www.matemaks.pl/interpretacja-geometryczna-liczby-zespolonej.html"
 							/>
 						</div>

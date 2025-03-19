@@ -779,7 +779,7 @@ export const FractalsOnADailyBasis: FractalsOnADailyBasisType = {
 				name: 'Unerwienie liści',
 				images: [
 					{
-						src: '/fractals/nature/leaf_1_web.jpg',
+						src: '/fractals/nature/Leaf_1_web.jpg',
 						copyrightLink: 'https://pl.wikipedia.org/wiki/Li%C5%9B%C4%87',
 					},
 					{
