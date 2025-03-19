@@ -21,8 +21,8 @@ export default function FolderSystem({ files, label, parentURL = '', icon }: Pro
 	const [isOpen, setIsOpen] = useState(false)
 	const currentPath = `${parentURL}/${Slugify(label).toLowerCase()}`
 	const pathname = usePathname()
-	const isActive = pathname === currentPath
-	const shouldBeOpen = pathname.startsWith(currentPath)
+	const isActive = pathname.startsWith(currentPath)
+	const shouldBeOpen = isActive
 
 	const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
 
