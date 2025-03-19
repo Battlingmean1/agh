@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	background-color: #000000;
+	color: white;
+}
+
+/* @layer utilities {
+	/Cały scrollbar 
+	.custom-scrollbar::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+
+	 Ścieżka (tło scrollbara) 
+	.custom-scrollbar::-webkit-scrollbar-track {
+		background: #888;
+		border-radius: 10px;
+	}
+
+	 Rączka (przesuwana część) 
+	.custom-scrollbar::-webkit-scrollbar-thumb {
+		background: #f1f1f1;
+		border-radius: 10px;
+	}
+
+	 Hover na rączce 
+	.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
+} */
+
+/* 
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+} */
