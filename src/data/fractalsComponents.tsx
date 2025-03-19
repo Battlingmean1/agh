@@ -235,15 +235,18 @@ export function KochCurve() {
 		}
 	}, [])
 
-	if (!windowWidth) {
-		return <div>Ładowanie krzywej...</div>
-	}
-
 	const canvasSize = useMemo(() => {
+		if (windowWidth === null) {
+			return null
+		}
 		const width = Math.min(windowWidth * 0.7, 800)
 		const height = width / 2
 		return { width, height }
 	}, [windowWidth])
+
+	if (!canvasSize) {
+		return <div>Ładowanie krzywej...</div>
+	}
 
 	const [value, setValue] = useState(0)
 
@@ -341,16 +344,18 @@ export function KochSnowflake() {
 		}
 	}, [])
 
-	if (!windowWidth) {
-		return <div>Ładowanie płatka...</div>
-	}
-
 	const canvasSize = useMemo(() => {
+		if (windowWidth === null) {
+			return null
+		}
 		const width = Math.min(windowWidth * 0.7, 800)
 		const height = width
 		return { width, height }
 	}, [windowWidth])
 
+	if (!canvasSize) {
+		return <div>Ładowanie płatka...</div>
+	}
 	const [value, setValue] = useState(0)
 
 	return (
@@ -421,15 +426,18 @@ export function BinaryTree() {
 		}
 	}, [])
 
-	if (!windowWidth) {
-		return <div>Ładowanie drzewa...</div>
-	}
-
 	const canvasSize = useMemo(() => {
+		if (windowWidth === null) {
+			return null
+		}
 		const width = Math.min(windowWidth * 0.8, 800)
 		const height = width
 		return { width, height }
 	}, [windowWidth])
+
+	if (!canvasSize) {
+		return <div>Ładowanie drzewa...</div>
+	}
 
 	const [value, setValue] = useState(0)
 
@@ -501,16 +509,18 @@ export function CantorSet() {
 		}
 	}, [])
 
-	if (!windowWidth) {
-		return <div>Ładowanie zbioru Cantora...</div>
-	}
-
 	const canvasSize = useMemo(() => {
+		if (windowWidth === null) {
+			return null
+		}
 		const width = Math.min(windowWidth * 0.7, 800)
 		const height = width / 2
 		return { width, height }
 	}, [windowWidth])
 
+	if (!canvasSize) {
+		return <div>Ładowanie zbioru Cantora...</div>
+	}
 	const [value, setValue] = useState(0)
 
 	return (
@@ -579,15 +589,18 @@ export function MandelbrotSet() {
 		}
 	}, [])
 
-	if (!windowWidth) {
-		return <div>Ładowanie Mandelbrota...</div>
-	}
-
 	const canvasSize = useMemo(() => {
+		if (windowWidth === null) {
+			return null
+		}
 		const width = Math.min(windowWidth * 0.6, 800)
 		const height = width
 		return { width, height }
 	}, [windowWidth])
+
+	if (!canvasSize) {
+		return <div>Ładowanie Mandelbrota...</div>
+	}
 
 	useEffect(() => {
 		const canvas = canvasRef.current
@@ -687,15 +700,27 @@ export function JuliaSet() {
 		}
 	}, [])
 
-	if (!windowWidth) {
-		return <div>Ładowanie Julii...</div>
-	}
-
 	const canvasSize = useMemo(() => {
+		if (windowWidth === null) return null
 		const width = Math.min(windowWidth * 0.6, 800)
 		const height = width
 		return { width, height }
 	}, [windowWidth])
+
+	useEffect(() => {
+		setWindowWidth(window.innerWidth)
+		const handleResize = () => {
+			setWindowWidth(window.innerWidth)
+		}
+		window.addEventListener('resize', handleResize)
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, [])
+
+	if (!canvasSize) {
+		return <div>Ładowanie Julii...</div>
+	}
 
 	useEffect(() => {
 		const canvas = canvasRef.current
@@ -808,14 +833,15 @@ export function HilbertCurveSet() {
 		}
 	}, [])
 
-	if (!windowWidth) {
-		return <div>Ładowanie krzywej Hilberta...</div>
-	}
-
 	const canvasSize = useMemo(() => {
+		if (windowWidth === null) return null
 		const width = Math.min(windowWidth * 0.7, 800)
 		return { width, height: width }
 	}, [windowWidth])
+
+	if (!canvasSize) {
+		return <div>Ładowanie krzywej Hilberta...</div>
+	}
 
 	useEffect(() => {
 		const canvas = canvasRef.current
@@ -886,7 +912,6 @@ export function LorenzAttractor() {
 		const ctx = canvas.getContext('2d')
 		if (!ctx) return
 
-		// Pre-simulate to get bounds
 		let minX = x,
 			maxX = x,
 			minY = y,
@@ -917,7 +942,6 @@ export function LorenzAttractor() {
 		const scaleZ = (canvasSize.height / (maxZ - minZ)) * 0.4
 		const scale = Math.min(scaleX, scaleZ)
 
-		// Reset positions
 		x = 0.1
 		y = 0
 		z = 0
