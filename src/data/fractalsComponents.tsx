@@ -695,10 +695,13 @@ export function JuliaSet() {
 
 	useEffect(() => {
 		setWindowWidth(window.innerWidth)
+
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth)
 		}
+
 		window.addEventListener('resize', handleResize)
+
 		return () => {
 			window.removeEventListener('resize', handleResize)
 		}
@@ -710,20 +713,6 @@ export function JuliaSet() {
 		const height = width
 		return { width, height }
 	}, [windowWidth])
-
-	useEffect(() => {
-		setWindowWidth(window.innerWidth)
-
-		const handleResize = () => {
-			setWindowWidth(window.innerWidth)
-		}
-
-		window.addEventListener('resize', handleResize)
-
-		return () => {
-			window.removeEventListener('resize', handleResize)
-		}
-	}, [])
 
 	if (!canvasSize) {
 		return <div>Ładowanie Julii...</div>
