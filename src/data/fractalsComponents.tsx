@@ -713,10 +713,13 @@ export function JuliaSet() {
 
 	useEffect(() => {
 		setWindowWidth(window.innerWidth)
+
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth)
 		}
+
 		window.addEventListener('resize', handleResize)
+
 		return () => {
 			window.removeEventListener('resize', handleResize)
 		}
@@ -731,6 +734,10 @@ export function JuliaSet() {
 		if (canvas) {
 			const ctx = canvas.getContext('2d')
 			if (ctx) {
+				ctx.clearRect(0, 0, canvasSize.width, canvasSize.height)
+				ctx.beginPath()
+				ctx.strokeStyle = 'white'
+				ctx.lineWidth = 1
 				drawJulia(ctx, canvasSize.width, canvasSize.height, maxIter, cx, cy)
 			}
 		}
@@ -894,14 +901,17 @@ export function LorenzAttractor() {
 		return () => window.removeEventListener('resize', handleResize)
 	}, [])
 
-	if (!windowWidth) {
-		return <div>Ładowanie atraktora Lorenza...</div>
-	}
-
 	const canvasSize = useMemo(() => {
+		if (!windowWidth) {
+			return { width: 0, height: 0 }
+		}
 		const width = Math.min(windowWidth * 0.7, 800)
 		return { width, height: width }
 	}, [windowWidth])
+
+	if (!windowWidth) {
+		return <div>Ładowanie atraktora Lorenza...</div>
+	}
 
 	useEffect(() => {
 		const sigma = 10
